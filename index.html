@@ -32,10 +32,16 @@
       <form id="memo-form" hidden>
         <label for="memo">오늘 입은 옷</label>
         <input id="memo" name="memo" required maxlength="120" placeholder="예: 니트에 코트, 목도리">
-        <button id="load-memo" type="button" hidden>메모 다시 불러오기</button>
         <button id="save" type="submit">메모 저장</button>
+        <button id="cancel-edit" type="button" hidden>수정 취소</button>
       </form>
       <p id="memo-status" role="status"></p>
+      <section id="memo-history" aria-labelledby="memo-history-heading" hidden>
+        <h3 id="memo-history-heading">저장한 메모</h3>
+        <p id="memo-empty" hidden>저장한 메모가 없습니다.</p>
+        <ul id="memo-list"></ul>
+        <button id="load-memo" type="button" hidden>목록 다시 불러오기</button>
+      </section>
     </section>
     <footer>날씨 데이터 제공 <a href="https://open-meteo.com/">Open-Meteo</a></footer>
   </main>

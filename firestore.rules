@@ -1,14 +1,14 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
-    match /users/{uid}/outfitMemos/{day} {
+    match /users/{uid}/outfitMemos/{memoId} {
       function isOwner() {
         return request.auth != null && request.auth.uid == uid;
       }
 
-      allow get: if isOwner();
+      allow get, list, delete: if isOwner();
       allow create, update: if isOwner()
-        && day.matches('[0-9]{4}-[0-9]{2}-[0-9]{2}')
+        && (memoId.matches('[0-9]{4}-[0-9]{2}-[0-9]{2}') || memoId.matches('[A-Za-z0-9]{20}'))
         && request.resource.data.keys().hasOnly(['text', 'updatedAt'])
         && request.resource.data.keys().hasAll(['text', 'updatedAt'])
         && request.resource.data.text is string

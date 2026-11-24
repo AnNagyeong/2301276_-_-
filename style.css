@@ -29,3 +29,13 @@ form button { justify-self: start; }
 footer { margin-top: 1.25rem; font-size: .875rem; }
 a { color: #155680; }
 @media (max-width: 30rem) { main { margin: 1.5rem auto; } }
+
+#memo-history { border-top: 1px solid #d5e0e9; border-radius: 0; padding: 1rem 0 0; }
+#memo-history h3 { margin: 0 0 .75rem; font-size: 1.075rem; }
+#memo-list { display: grid; gap: .65rem; list-style: none; margin: 0; padding: 0; }
+#memo-list li { background: #eef4f8; border-radius: .65rem; padding: .85rem; }
+#memo-list p { margin-top: 0; overflow-wrap: anywhere; }
+#memo-list small { color: #345975; }
+.memo-actions { display: flex; gap: .5rem; margin-top: .65rem; }
+.memo-actions button, #cancel-edit { background: white; color: #155680; border-color: #748fa3; }
+.memo-actions button:last-child { color: #922d38; }
