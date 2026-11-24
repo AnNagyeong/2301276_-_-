@@ -1,7 +1,6 @@
-// Firebase Console의 웹 앱 설정 객체로 교체하세요.
 export const firebaseConfig = {
-  apiKey: "",
-  authDomain: "",
-  projectId: "",
-  appId: "",
+  "apiKey": "AIzaSyABSUahEzxMqwvkvj-vqJ0RJn3ACK-x-KQ",
+  "authDomain": "seoul-weather-outfit.firebaseapp.com",
+  "projectId": "seoul-weather-outfit",
+  "appId": "1:704713758466:web:f13c4e292b5b0bad9f941b"
 };
