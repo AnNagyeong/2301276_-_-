@@ -2,7 +2,9 @@
 
 서울의 현재 기온과 날씨를 확인하고, Google 계정으로 로그인해 오늘 입은 옷을 한 줄로 기록하는 기말 해커톤 리허설 프로젝트입니다. Open-Meteo는 별도 키 없이 호출하고, 메모는 Firebase Authentication과 Cloud Firestore를 사용합니다. HTML, CSS, JavaScript로 구성되어 빌드 없이 GitHub Pages에서 실행됩니다.
 
-**배포 주소:** GitHub Pages 설정 후 `https://annagyeong.github.io/2301276_-_-/`에서 확인할 수 있습니다.
+**배포 주소** · [지금 서울 날씨 & 나의 옷차림 메모](https://annagyeong.github.io/2301276_-_-/)
+
+이 저장소는 GitHub Pages의 `main` 브랜치 루트에서 배포됩니다. Firebase 프로젝트 `seoul-weather-outfit`에 Google 로그인과 서울 리전 Firestore를 연결했습니다. 아래 설정 절차는 다른 Firebase 프로젝트나 GitHub 저장소에서 재현할 때 사용합니다.
 
 ## 로컬 실행
 
