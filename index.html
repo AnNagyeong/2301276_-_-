@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>지금 서울 날씨 · 옷차림 메모</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <p class="location">대한민국 · 서울</p>
+      <h1>지금 서울 날씨</h1>
+    </header>
+    <section class="weather" aria-labelledby="weather-heading">
+      <div class="row">
+        <h2 id="weather-heading">현재 날씨</h2>
+        <button id="refresh" type="button">새로고침</button>
+      </div>
+      <div id="weather-data" hidden>
+        <p id="temperature" class="temperature"></p>
+        <p id="condition"></p>
+      </div>
+      <p id="weather-status" role="status">날씨를 불러오는 중입니다.</p>
+    </section>
+    <section class="memo" aria-labelledby="memo-heading">
+      <h2 id="memo-heading">나의 옷차림 메모</h2>
+      <p id="memo-date"></p>
+      <p id="auth-status" role="status">로그인 설정을 확인하는 중입니다.</p>
+      <button id="login" type="button" hidden>Google로 로그인</button>
+      <button id="logout" type="button" hidden>로그아웃</button>
+      <form id="memo-form" hidden>
+        <label for="memo">오늘 입은 옷</label>
+        <input id="memo" name="memo" required maxlength="120" placeholder="예: 니트에 코트, 목도리">
+        <button id="load-memo" type="button" hidden>메모 다시 불러오기</button>
+        <button id="save" type="submit">메모 저장</button>
+      </form>
+      <p id="memo-status" role="status"></p>
+    </section>
+    <footer>날씨 데이터 제공 <a href="https://open-meteo.com/">Open-Meteo</a></footer>
+  </main>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
